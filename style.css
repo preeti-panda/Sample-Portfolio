@@ -1,0 +1,732 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Meinily', sans-serif;
+  }
+  html{
+    font-size:16px;        box-sizing:border-box;                                                
+  }
+  
+  .nav{
+    width:100vw;
+    height:80px;
+    background: radial-gradient(circle, rgba(244,183,188,1) 4%, rgba(242,189,233,1) 46%, rgba(241,156,196,1) 82%) ; 
+    margin: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    z-index: 2;
+  }
+  
+  .nav-list{
+    display:flex;
+    margin-right: 50px;
+    list-style-type: none; 
+  }
+  
+  .nav-list a{
+   text-decoration: none;
+   color:white; 
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   display: block;
+   font-size:16px;
+  }
+  
+  .nav-list a:hover{
+     border-radius: 20px;
+     background:  #e3588f;
+  }
+  
+  body{
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .welcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fffcf7;
+    overflow: hidden;
+  }
+  
+  .girl-img {
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    top: 0;
+    margin-left:10%;
+    left:0;
+    right: 40%;
+    z-index: 0;
+    opacity: 0.87;
+  }
+  
+  .welcome-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .welcome-text {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    left: 5%;
+  }
+  
+  .welcome-text p{
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .typing-text{
+    font-family: 'Ikka Rounded';
+    font-size: 60px;
+    padding-bottom: 20px;
+    text-align:left;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden; 
+    border-right: 2px solid #000;
+     animation: typing 3s steps(20, end) 3s infinite , blink-caret 0.5s step-end  infinite;
+  }
+  
+  .view{
+    background: radial-gradient(circle, rgba(244,183,188,1) 4%, rgba(242,189,233,1) 46%, rgba(241,156,196,1) 82%) ;
+    border:none;
+    border-radius: 24px;
+    transition: transform 0.3s ease; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .view a{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .view:hover {
+   transform: translateY(-10px);
+  }
+  
+  .profile-button{
+   background: radial-gradient(circle, rgba(244,183,188,1) 4%, rgba(242,189,233,1) 46%, rgba(241,156,196,1) 82%) ;
+    border:none;
+    border-radius: 24px;
+    transition: transform 0.3s ease; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top:30px;
+  }
+  
+  .github-link{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .projects{
+    width:100%;
+    height: auto;
+    display: flex;  
+    align-items:center;
+    flex-direction: column;
+    padding-bottom: 40px;
+    background: #fffefb;
+   
+  }
+  
+  .welcome.div{
+    width: 100%;
+    display: flex;
+  }
+  
+  .work-text{
+   margin:30px;
+   font-family: 'Ikka Rounded';
+  }
+  
+  .bar1 {
+    background: black;
+    border-radius: 0 0 24px 24px;
+    border-top: 1px solid white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .project-name {
+    color: white;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  
+  .project-title{
+    border-radius: 24px;
+    width: 300px;
+    height: 320px; 
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  
+  .project-title:hover{
+    width: 300px;
+    height: 320px; 
+    transform: translateY(-10px);
+  }
+  
+  
+  .project-tile{
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    justify-content:center;
+    display:grid;
+    width: auto;
+    row-gap:40px;
+    column-gap:40px;
+  }
+  
+  .contact{
+    height: auto;
+    width: 100vw;
+    background: #fffcf7;
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    padding-bottom: 100px;
+    border-top: 1px solid grey;
+  }
+  
+  .contact-extra ,h2 ,p{
+    font-family: 'Meinily', sans-serif;
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+  
+  .contact-extra {
+     width: 50vw;
+     height: auto;
+     margin-left: 15%;
+     margin-right: 15%;
+     display:flex;
+     flex-direction: column;
+     padding-right: 20px;
+     margin-top: 80px; 
+  }
+  
+  .social-icons{
+    padding-top: 30px;
+    display:flex;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-left: 0px;
+  }
+  
+  .social-icons i{
+    padding-right: 30px;
+  }
+  
+  form{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: 300px;
+    width: 50vw;
+    margin: 0 auto;
+    margin-right: 10%;
+  }
+  
+  fieldset{
+    border:0;
+  }
+  
+  
+  input, textarea{
+    display:flex;
+    width: 100%; 
+    margin-top:5px;
+    border-radius: 12px;
+    border: 1px solid;
+    padding-left: 10px;  
+  }
+  
+  label input{
+    height: 30px;
+  }
+  
+  input[type="submit"] {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    text-align:center;
+    background:  #e3588f;
+    border: none;
+    color: white;
+     padding: 10px;
+    font-size: 16px;  
+  }
+  
+  
+  label{
+    display:block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+  }
+  
+  footer{
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background:  #e3588f;
+    text-align: center;
+    color:white;
+  }
+  
+  footer p{
+    font-size: 16px;
+    padding: 10px;
+  
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+    scroll-behavior: smooth;
+  }
+  }
+  
+  
+  /* Define the keyframes for the typing animation */
+  @keyframes typing {
+    0% {
+      width: 0; /* Start with no text visible */
+    }
+    100% {
+      width: 50%; /* Fully reveal the text */
+    }
+    75%, 100% {
+      width: 50%;
+      animation-timing-function: step-start;
+    }
+  }
+  
+  /* Define the keyframes for the blinking cursor animation */
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent; /* Cursor disappears and reappears */
+    }
+    50% {
+      border-color: #000; /* Cursor is visible in the middle of the animation */
+    }
+  }
+  
+  
+  
+  @media (min-width:850px) and (max-width:1130px){
+  
+    @keyframes typing {
+    0% {
+      width: 0; 
+    }
+    100% {
+      width: 70%; 
+    }
+    75%, 100% {
+      width: 70%;
+      animation-timing-function: step-start;
+    }
+  }
+  
+  .welcome-text{
+    width: 100vw;
+    top: 25%;
+  }
+  
+  .welcome-text p{
+    font-size: 18px;
+    padding-bottom: 30px;
+  }
+  
+  .typing-text{
+    left: 4%;
+    font-size: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .project-title{
+    border-radius: 24px;
+    width: 250px;
+    height: 270px; 
+    padding: 20px;
+  
+  }
+  
+  .project-title:hover{
+    width: 250px;
+    height: 270px;
+  }
+  
+  
+  .project-tile{
+    width: auto;
+    row-gap:40px;
+    column-gap:40px; 
+  }
+  }
+  
+  
+  @media (min-width:646px) and (max-width:850px){
+  
+    @keyframes typing {
+    0% {
+      width: 0; /* Start with no text visible */
+    }
+    100% {
+      width: 55%; /* Fully reveal the text */
+    }
+    75%, 100% {
+      width: 55%;
+      animation-timing-function: step-start;
+    }
+  }
+  
+  .welcome-text{
+    width: 100vw;
+    top: 25%;
+    left: 0%;
+  }
+  
+  .welcome-text p{
+    font-size: 20px;
+  }
+  
+  .typing-text{
+    font-size: 35px;
+  }
+  
+  .girl-img {
+    width: 80%;
+    max-height: 100%;
+    margin-left:15%;
+    top: 10%;
+    left: 15%;
+    right: 40%;
+  }
+  
+  
+  .project-title{
+    width: 250px;
+    height: 270px; 
+    padding: 20px;
+  
+  }
+  
+  .project-title:hover{
+    width: 250px;
+    height: 270px; 
+  }
+  
+  .project-tile{
+    display:grid;
+    width: auto;
+    row-gap:40px;
+    column-gap:40px;
+  }
+  
+  input, textarea,label{
+    font-size: 12px;
+  }
+  
+  contact, h2, p{
+    font-size: 14px;
+  }
+  
+   textarea,placeholder{
+    padding-top: 10px;
+  }
+  input[type="submit"] {
+    font-size: 12px;
+  }
+   .social-icons a i {
+      font-size: 1.5rem; 
+    }
+  
+   .view a, .github-link{
+     font-size: 12px;
+   }
+  
+   footer p{
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  }
+  
+  
+  @media (max-width:645px){
+  
+    @keyframes typing {
+    0% {
+      width: 0; /* Start with no text visible */
+    }
+    100% {
+      width: 80%; /* Fully reveal the text */
+    }
+    75%, 100% {
+      width: 80%;
+      animation-timing-function: step-start;
+    }
+  }
+  
+  .welcome-text{
+    position:absolute;
+    width: 100vw;
+    top: 25%;
+    left: 0%;
+  }
+  
+  .welcome-text p{
+    font-size: 16px;
+    width: 50%;
+  }
+  
+  .typing-text{
+    width: 60%;
+    font-size: 24px;  
+  }
+  
+  .girl-img {
+    width: 80%;
+    max-height: 100%;
+    margin-left:15%;
+    top: 10%;
+    left: 15%;
+    right: 40%;
+    opacity: 0.8;
+  }
+  
+   footer p{
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  .project-title{
+    width: 110px;
+    height: 130px; 
+  }
+  
+  .project-name {
+    font-size: 10px;
+  }
+  
+  .bar1{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 0;
+   padding-right: 0;
+  }
+  
+  .project-title:hover{
+    width: 110px;
+    height: 130px; 
+  }
+  
+  .project-tile{
+    display:grid;
+    width: auto;
+    row-gap:40px;
+    column-gap:40px; 
+  }
+  
+  input, textarea,label{
+    font-size: 12px;
+  }
+  
+  contact, h2, p{
+    font-size: 14px;
+  }
+  
+   textarea,placeholder{
+    padding-top: 10px;
+  }
+  
+  input[type="submit"] {
+    font-size: 12px;
+  }
+  
+   .social-icons a i {
+      font-size: 1.5rem; 
+    }
+  
+  .view a, .github-link{
+     font-size: 12px;
+   }
+  
+  form{
+    width: 60vw;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+   .contact-extra{
+     width: 60vw;
+     text-align:center;
+     margin: 10 auto;
+     
+   }
+  
+   .contact{
+    width: 100vw;
+    flex-direction:column;
+  
+  }
+  
+  
+  
+  /*@keyframes wink{
+     0%
+    { 
+     height: 35px;
+      margin-top: 0; 
+    }
+  
+    3.9%
+    {
+      height: 10px;
+      margin-top: 8px; 
+    }
+  
+    9.1%
+    {
+      height: 10px;
+      margin-top: 8px; 
+    }
+    
+    13% 
+    { 
+      height: 35px;
+      margin-top: 0; 
+    }
+    
+    100% 
+    { 
+      height: 35px;
+      margin-top: 0; 
+    }
+  }
+  
+  
+  @keyframes widenSmile {
+    0%{
+    width: 160px;
+    border-radius: 30%
+    }
+  
+     25% {
+      width: 160px;
+       border-radius: 50%;
+    }
+  
+      50% {
+      width: 160px;
+       border-radius: 75%;
+    }
+  
+    80% {
+     width: 160px;
+      border-radius: 100% ;
+    }
+  
+    100% {
+     width: 160px;
+      border-radius: 50% ;
+    }
+  }*/
+  /*radial-gradient(circle, rgba(244,183,188,1) 4%, rgba(242,189,233,1) 46%, rgba(241,156,196,1) 82%);
+  
+  
+  /* ANIMATION TRIAL
+  
+  .smiley-face{
+    position: relative;
+    top:10%;
+    width:200px;
+    height:200px;
+    background: brown;
+    border-radius: 100%;
+    background-color: #7f2f19;
+  background-image: linear-gradient(315deg, #7f2f19 0%, #b46f47 74%);
+   /* animation: widenSmile 2s infinite alternate
+   }
+  
+  /*.smiley-face *{
+   position:absolute;
+  }
+  
+  .eye{
+    width:30px;
+    height:35px;
+    background:white;
+    border-radius:100%;
+    background-color: #570f0a;
+  background-image: linear-gradient(315deg, #570f0a 0%, #953b20 74%);
+  
+  }
+  
+  .eye.left{
+    left: 25%;
+    top: 25%;
+  }
+  
+  .eye.right{
+    right: 25%;
+    top: 25%;
+    animation: wink 2s infinite linear;
+  }
+  
+  /*.smile:hover{
+    width:130px;
+    border-radius:100%;
+  }*/
+  
